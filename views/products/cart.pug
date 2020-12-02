@@ -1,19 +1,26 @@
 extends ../layout
 
 block content 
-    h1 Add item to your playlist
+    h1 add your items
     - var total=0
     table(class="table") 
         thead 
             tr  
-                th item Name
-                th item Price
+                th Item Name
+                th Item Price
+                th City
+                th Location
+                th More Details
+                th Actions
         each item in cart
             - total += Number(item.price)
             tbody
                 tr
                     td=item.name        
                     td=item.price
+                    td=item.city
+                    td=item.location
+                    td=item.detail
                     td
                         a(href="cart/remove/"+item._id ,class="btn btn-danger") Remove
         tfoot
