@@ -48,8 +48,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-mongoose.connect("mongodb+srv://maryam_012:maryam_0123@cluster0.uk6gw.mongodb.net/test",{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=>{
-  console.log("Connection to mongoDB Successfull");
+mongoose.connect("mongodb+srv://mongodb:bigboss1517@cluster0.iaopa.mongodb.net/test",{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=>{
+  console.log("Connected to mongoDB");
 }).catch((err)=>{
 console.log("Connection error");
 console.log(err);
